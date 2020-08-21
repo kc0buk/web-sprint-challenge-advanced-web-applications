@@ -7,6 +7,7 @@ export const useAPI = (config) => {
     const { method, url, data } = config
 
     const moveData = () => {
+        console.log(config)
          return axiosWithAuth()
             [method](url, data)
             .then( res => res.data)
