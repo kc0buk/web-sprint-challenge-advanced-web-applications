@@ -35,7 +35,7 @@ test("Fetches data and renders the bubbles", async () => {
     await render(<BubblePage/>)
     
     screen.debug()
-    const color = waitFor(() => screen.getByText(/aliceblue/i))
+    const color = await waitFor(() => screen.getByText(/aliceblue/i))
     expect(color).toBeInTheDocument() 
 });
 
